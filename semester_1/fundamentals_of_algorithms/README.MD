@@ -24,10 +24,10 @@ Este repositório contém materiais de estudo da disciplina **Fundamentos de Alg
 
 ## Livros de Referência
 
-1. **Introdução à Programação com Python: Algoritmos e Lógica de Programação para Iniciantes (2ª Edição)**  
+1. **[Introdução à Programação com Python: Algoritmos e Lógica de Programação para Iniciantes (2ª Edição)](https://www.academia.edu/43386855/Introdu%C3%A7%C3%A3o_%C3%A0_Programa%C3%A7%C3%A3o_com_Python_Algoritmos_e_l%C3%B3gica_de_programa%C3%A7%C3%A3o_para_iniciantes_2a_Edi%C3%A7%C3%A3o)**  
    Este livro fornece uma introdução acessível à programação, focando em algoritmos e lógica de programação com Python. A resolução dos exercícios propostos será armazenada na pasta dedicada a este livro.
 
-2. **Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People**  
+2. **[Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People](https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf)**  
    Este livro oferece uma explicação visual e intuitiva de diversos algoritmos, com exemplos práticos em Python. As soluções dos exercícios também estarão disponíveis em uma pasta dedicada a este livro.
 
 
