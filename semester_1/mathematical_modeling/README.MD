@@ -11,7 +11,7 @@ Este repositório contém materiais de estudo da disciplina **Modelagem Matemát
 
 ## 📖 Referência
 O conteúdo estudado tem como principal referência o livro:  
-**Pré-Cálculo - Uma Preparação para o Cálculo** – *Sheldon Axler*
+**Pré-Cálculo - Uma Preparação para o Cálculo** – *Sheldon Axler*   
 📚 [PDFCOFFEE](https://www.academia.edu/43582512/Sheldon_Axler_Pr%C3%A9_C%C3%A1lculo_Uma_Prepara%C3%A7%C3%A3o_Para_o_C%C3%A1lculo_LTC_2016_)  
 📚 [ACADEMIA.EDU](https://books.google.com/books/about/Precalculus.html?id=8Y8yDwAAQBAJ)
 
