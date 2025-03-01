@@ -1,0 +1,27 @@
+.videos-container {
+    display: flex;
+    justify-content: center; 
+    gap: 100px;
+}
+.livros-container {
+    display: flex;
+    justify-content: center; 
+    gap: 100px;
+}
+.livros-container img {
+    width: 200px;
+    height: auto;
+}
+table {
+    margin: auto;
+    border: 2px dashed red;
+    width: 50%;
+}
+th {
+    color: red;
+}
+th, td {
+    border: 1px solid red;
+    padding: 5px;
+    text-align: center;
+}
