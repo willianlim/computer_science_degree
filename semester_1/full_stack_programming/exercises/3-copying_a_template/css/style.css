@@ -1,74 +1,148 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d3d3e3;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #d3d3e3;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .header-container {
-    margin: 4px 4px 0 4px; 
+  margin: 4px 4px 0 4px;
 }
 .header-top {
-    background-color: bisque;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
-    border: 3px solid darkblue;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid darkblue;
 }
 .header-top img {
-    height: 200px;
-    width: auto;
+  height: 200px;
+  width: auto;
 }
 .title {
-    font-size: 28px;
-    font-weight: bold;
-    color: green;
+  font-size: 28px;
+  font-weight: bold;
+  color: green;
 }
 .nav-container {
-    background-color: lightskyblue;
-    padding: 10px 0;
-    /* border-top: 3px solid black; */
+  background-color: lightskyblue;
+  padding: 10px 0;
+  /* border-top: 3px solid black; */
 }
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 nav ul li {
-    display: inline;
-    margin: 0 50px;
+  display: inline;
+  margin: 0 50px;
 }
 nav ul li a {
-    color: darkred;
-    text-decoration: none;
-    font-weight: bold;
+  color: darkred;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .videos-container {
-    display: flex;
-    justify-content: center; 
-    gap: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 .livros-container {
-    display: flex;
-    justify-content: center; 
-    gap: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 .livros-container img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 table {
-    margin: auto;
-    border: 4px dashed red;
-    width: 50%;
+  margin: auto;
+  border: 4px dashed red;
+  width: 30%;
 }
 th {
-    color: red;
+  color: red;
 }
-th, td {
-    border: 1px solid red;
-    padding: 5px;
-    text-align: center;
+th,
+td {
+  border: 1px solid red;
+  padding: 5px;
+  text-align: center;
+}
+
+section {
+  position: relative; /* Define a section como referência para posicionamento absoluto */
+}
+
+.consulta-container {
+  background-color: yellow;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  position: relative; /* Mantém a posição relativa para a div */
+  width: 40%;
+  text-align: left;
+}
+
+.consulta-container p {
+  position: absolute; /* Define o parágrafo com posição absoluta */
+  top: 0; /* Alinha ao topo da section */
+  left: 0; /* Alinha à esquerda da section */
+  margin: 0; /* Remove margens padrão */
+}
+
+.consulta-container ul {
+  padding: 0;
+  /* list-style: none; */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.consulta-container li {
+  margin: 1px 0; /* Adiciona margem entre os itens da lista */
+  text-align: center;
+}
+
+.consulta-container a {
+  display: inline-block; /* Faz com que o link ocupe toda a largura do item da lista */
+  text-align: center; /* Centraliza o conteúdo do link */
+  width: 100%; /* Define a largura do link */
+}
+
+.icons {
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.icons img,
+#css {
+  margin-right: 15px;
+}
+
+footer {
+  /* color: white; */
+  padding: 4px;
+  margin-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+footer ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
