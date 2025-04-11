@@ -17,3 +17,4 @@ Aqui você encontrará resumos, exercícios, projetos e anotações sobre cada d
 ## 📖 Referências
 - Livro "Estruturas de Dados e Algoritmos"
 - Curso "Banco de Dados Relacionais"
+
