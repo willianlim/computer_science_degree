@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhação</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100); // Gera um número aleatório entre 0 e 99
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById("guessInput").value);
+            const result = document.getElementById("result");
+
+            if (userGuess === randomNumber) {
+                result.textContent = "Parabéns! Você acertou!";
+                result.style.setProperty("background-color", "green");
+            } else if (userGuess > randomNumber) {
+                result.textContent = "Muito alto! Tente novamente.";
+                result.style.setProperty("background-color", "red");
+            } else {
+                result.textContent = "Muito baixo! Tente novamente.";
+                result.style.setProperty("background-color", "red");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Digite um número entre 0 e 99:</p>
+        <input type="number" id="guessInput" min="0" max="99">
+        <button onclick="checkGuess()">Enviar</button>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
