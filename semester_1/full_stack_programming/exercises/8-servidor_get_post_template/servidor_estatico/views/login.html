@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <h1>Login e Cadastro</h1>
+
+  <div class="container-forms">
+    <!-- Formulário de Login -->
+    <form action="/login" method="POST" class="form-box">
+      <h2>Login</h2>
+      <label>Usuário: <input type="text" name="usuario" required /></label><br><br>
+      <label>Senha: <input type="password" name="senha" required /></label><br><br>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Formulário de Cadastro -->
+    <form action="/cadastra" method="POST" class="form-box">
+      <h2>Cadastro</h2>
+      <label>Usuário: <input type="text" name="usuario" required /></label><br><br>
+      <label>Senha: <input type="password" name="senha" required /></label><br><br>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>
