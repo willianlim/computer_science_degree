@@ -24,22 +24,22 @@ def visualizar_historico(id_usuario):
         print("\n=== Histórico de Músicas ===")
 
         # Exibir músicas curtidas
-        musicas_curtidas = interacoes_usuario[interacoes_usuario["curtida"] > 0]
+        musicas_curtidas = interacoes_usuario[interacoes_usuario["status"] == "curtiu"]
         if not musicas_curtidas.empty:
             print("\n🎵 Músicas Curtidas:")
             for _, row in musicas_curtidas.iterrows():
                 musica = df_musicas[df_musicas["id_musica"] == row["id_musica"]].iloc[0]
-                print(f"- ID: {musica['id_musica']}, Nome: {musica['nome']}, Artista: {musica['artista']}")
+                print(f"- ID: {musica['id_musica']}, Nome: {musica['nome']}, Artista: {musica['id_artista']}")
         else:
             print("\n❌ Nenhuma música curtida encontrada.")
 
         # Exibir músicas descurtidas
-        musicas_descurtidas = interacoes_usuario[interacoes_usuario["curtida"] < 0]
+        musicas_descurtidas = interacoes_usuario[interacoes_usuario["status"] == "descurtiu"]
         if not musicas_descurtidas.empty:
             print("\n🎵 Músicas Descurtidas:")
             for _, row in musicas_descurtidas.iterrows():
                 musica = df_musicas[df_musicas["id_musica"] == row["id_musica"]].iloc[0]
-                print(f"- ID: {musica['id_musica']}, Nome: {musica['nome']}, Artista: {musica['artista']}")
+                print(f"- ID: {musica['id_musica']}, Nome: {musica['nome']}, Artista: {musica['id_artista']}")
         else:
             print("\n❌ Nenhuma música descurtida encontrada.")
     except Exception as e:

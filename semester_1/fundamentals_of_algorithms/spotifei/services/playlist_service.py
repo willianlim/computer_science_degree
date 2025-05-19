@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime
 import uuid
+from services.stats_service import visualizar_historico
 from utils.excel_utils import ler_planilha, salvar_planilha, atualizar_planilha, remover_registro
 from models.playlist import Playlist
 from models.playlist_musica import PlaylistMusica
