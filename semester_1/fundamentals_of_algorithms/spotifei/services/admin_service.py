@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+from utils.excel_utils import salvar_planilha
 
 CAMINHO_DB = "data/database.xlsx"
 
@@ -47,7 +48,6 @@ def cadastrar_administrador():
 
     df = pd.concat([df, novo_administrador], ignore_index=True)
 
-    with pd.ExcelWriter(CAMINHO_DB, engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
-        df.to_excel(writer, index=False, sheet_name="usuarios")
+    salvar_planilha("usuarios", df, coluna_unica="id_usuario")
 
     print(f"✅ Administrador '{nome}' cadastrado com sucesso!")
