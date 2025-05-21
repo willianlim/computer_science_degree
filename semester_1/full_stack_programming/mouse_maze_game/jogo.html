@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jogo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #container {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="desenvolvedores.html">Desenvolvedores</a>
+    <a href="jogo.html">Jogar</a>
+  </nav>
+  <main>
+    <h1>Jogue Agora</h1>
+    <section>
+      <p><strong>Comandos:</strong></p>
+      <ul>
+        <li>Teclado: <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> ou setas</li>
+        <li>Mouse ou toque (swipe)</li>
+        <li>Controle de videogame</li>
+        <li>Movimento por giroscópio (mobile)</li>
+      </ul>
+      <p><strong>Objetivo:</strong> Levar o emoji 🥺 até a casa 🏠 sem tocar nas barreiras brancas.</p>
+      <button onclick="startGame()">Iniciar Novo Labirinto</button>
+    </section>
+
+    <div id="container">
+      <div class="mbox">
+        <div id="maze">
+          <div id="thingie"><div class="emo" id="emo">🥺</div></div>
+          <div id="home"><div class="emo">🏠</div></div>
+          <div class="barrier" id="top"></div>
+          <div class="barrier" id="bottom"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="buttons">
+          <button class="btn" id="bu"><div class="chevron">↑</div></button>
+          <button class="btn" id="bd"><div class="chevron">↓</div></button>
+          <button class="btn" id="bl"><div class="chevron">←</div></button>
+          <button class="btn" id="br"><div class="chevron">→</div></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function startGame() {
+      document.getElementById('container').style.display = 'grid';
+      const script = document.createElement('script');
+      script.src = 'script.js';
+      script.type = 'module';
+      document.body.appendChild(script);
+    }
+  </script>
+</body>
+</html>
