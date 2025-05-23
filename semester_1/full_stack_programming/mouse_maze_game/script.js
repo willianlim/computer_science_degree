@@ -128,7 +128,6 @@ function up() {
 	animKeys(bu);
 	if (checkYboundry("u")) {
 		thingie.style.top = thingie.offsetTop - step + "px";
-		updateEmo(false);
 	}
 }
 
@@ -136,7 +135,6 @@ function down() {
 	animKeys(bd);
 	if (checkYboundry("d")) {
 		thingie.style.top = thingie.offsetTop + step + "px";
-		updateEmo(false);
 	}
 }
 
@@ -145,7 +143,6 @@ function left() {
 	if (checkXboundry("l")) {
 		thingie.style.left = thingie.offsetLeft - step + "px";
 	}
-	updateEmo(true);
 }
 
 function right() {
@@ -153,7 +150,7 @@ function right() {
 	if (checkXboundry("r")) {
 		thingie.style.left = thingie.offsetLeft + step + "px";
 	}
-	updateEmo(true);
+	checkWin();
 }
 
 //check if one can move horizontally
@@ -403,6 +400,50 @@ function animKeys(key) {
 	}, "150");
 }
 
+// function checkWin() {
+// 	if (
+// 		thingie.offsetLeft > mazeWidth - step &&
+// 		thingie.offsetTop === home.offsetTop
+// 	) {
+// 		const videoBox = document.getElementById("vitoriaContainer");
+// 		if (videoBox) {
+// 			videoBox.style.display = "block";
+// 		}
+// 	}
+// }
+
+// function checkWin() {
+// 	if (
+// 	  thingie.offsetLeft > mazeWidth - step &&
+// 	  thingie.offsetTop === home.offsetTop
+// 	) {
+// 	  const videoBox = document.getElementById("vitoriaContainer");
+// 	  if (videoBox) {
+// 		videoBox.style.display = "block";
+// 	  }
+// 	  document.getElementById("container").style.display = "none"; // oculta o labirinto
+// 	}
+//   }
+
+function checkWin() {
+	if (
+		thingie.offsetLeft > mazeWidth - step &&
+		thingie.offsetTop === home.offsetTop
+	) {
+		const vitoriaBox = document.getElementById("vitoriaContainer");
+		if (vitoriaBox) {
+			vitoriaBox.style.display = "block";
+		}
+
+		// Aguarda 5 segundos e recarrega a página para voltar às instruções
+		setTimeout(() => {
+			window.location.href = "jogo.html";
+		}, 5000);
+	}
+}
+
+  
+
 let maxl = 0;
 let prevl = 0;
 function updateEmo(lr) {
@@ -439,7 +480,7 @@ function updateEmo(lr) {
 			thingie.offsetTop === home.offsetTop
 		) {
 			emo.innerHTML = "🤗";
-			home.innerHTML = "🏠";
+			home.innerHTML = "🧀";
 		}
 		if (thingie.offsetLeft > mazeWidth) {
 			emo.innerHTML = "";
@@ -481,7 +522,7 @@ function updateEmo(lr) {
 	// 		emo.innerHTML = "🥳";
 	// 		home.innerHTML = "";
 	// 	} else {
-	// 		home.innerHTML = "🏠";
+	// 		home.innerHTML = "🧀";
 	// 	}
 
 	// 	prevDist = dist;

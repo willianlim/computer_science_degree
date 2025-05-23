@@ -27,15 +27,15 @@
         <li>Controle de videogame</li>
         <li>Movimento por giroscópio (mobile)</li>
       </ul>
-      <p><strong>Objetivo:</strong> Levar o emoji 🥺 até a casa 🏠 sem tocar nas barreiras brancas.</p>
+      <p><strong>Objetivo:</strong> Levar o emoji 🐭 até a casa 🧀 sem tocar nas barreiras brancas.</p>
       <button onclick="startGame()">Iniciar Novo Labirinto</button>
     </section>
 
     <div id="container">
       <div class="mbox">
         <div id="maze">
-          <div id="thingie"><div class="emo" id="emo">🥺</div></div>
-          <div id="home"><div class="emo">🏠</div></div>
+          <div id="thingie"><div class="emo" id="emo">🐭</div></div>
+          <div id="home"><div class="emo">🧀</div></div>
           <div class="barrier" id="top"></div>
           <div class="barrier" id="bottom"></div>
         </div>
@@ -49,6 +49,14 @@
         </div>
       </div>
     </div>
+    <div id="vitoriaContainer" style="display: none; text-align: center; margin-top: 20px;">
+      <img src="parabens.png" alt="Prato pronto" style="width: 340px; height: 240px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <p style="font-size: 18px; margin-top: 15px;">
+        <strong>Parabéns!</strong> Você concluiu o jogo ajudando seu amigo humano a entregar o prato no Master Chef! 👨‍🍳🧀🐭
+      </p>
+    </div>
+    
+    
   </main>
 
   <script>
