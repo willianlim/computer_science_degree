@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Carros</title>
+</head>
+<body>
+  <h1>Lista de Carros Disponíveis</h1>
+
+  <a href="/carros/cadastrar">Cadastrar Novo Carro</a><br><br>
+
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th>Qtde Disponível</th>
+      <th>Ações</th>
+    </tr>
+
+    <% carros.forEach(carro => { %>
+      <tr>
+        <td><%= carro.marca %></td>
+        <td><%= carro.modelo %></td>
+        <td><%= carro.ano %></td>
+        <td><%= carro.qtde_disponivel %></td>
+        <td>
+          <a href="/carros/editar/<%= carro._id %>">Editar</a> |
+          <a href="/carros/vender/<%= carro._id %>">Vender</a> |
+          <a href="/carros/remover/<%= carro._id %>" onclick="return confirm('Tem certeza que deseja remover este carro?')">Remover</a>
+        </td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>

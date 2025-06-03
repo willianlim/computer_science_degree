@@ -1,0 +1,71 @@
+body {
+    background-color: gray;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.containerpai {
+    width: auto;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform:uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+input {
+    background: rgba(255, 255, 255, 0.3);
+    height: 40px;
+    width: 20vh;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 12px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+}
+input:hover {
+    background: rgba(241, 237, 237, 0.767);
+}
+input[type="submit"] {
+    width: 10vh;
+}
+.containercarros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.containerbiblioteca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

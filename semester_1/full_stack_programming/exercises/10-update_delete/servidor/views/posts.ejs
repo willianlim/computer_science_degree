@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Posts</title>
+    <style>
+        body {
+            background-color: gray;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 60%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #999;
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .post strong {
+            font-size: 1.2em;
+        }
+
+        .voltar {
+            margin-bottom: 20px;
+        }
+
+        .voltar a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="voltar">
+            <a href="/">Criar Novo Post</a>
+        </div>
+
+        <% if (posts.length === 0) { %>
+            <p>Nenhum post cadastrado ainda.</p>
+        <% } else { %>
+            <% posts.forEach(function(post) { %>
+                <div class="post">
+                    <strong><%= post.db_titulo %></strong><br>
+                    <em><%= post.db_resumo %></em><br>
+                    <p><%= post.db_conteudo %></p>
+                </div>
+            <% }); %>
+        <% } %>
+    </div>
+</body>
+</html>

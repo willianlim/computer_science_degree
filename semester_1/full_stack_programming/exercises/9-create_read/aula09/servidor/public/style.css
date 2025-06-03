@@ -1,0 +1,14 @@
+body {
+    background-color: gray;
+}
+.containerpai {
+    width: auto;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
